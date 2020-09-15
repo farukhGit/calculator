@@ -26,10 +26,14 @@ class Calculator{
         
         chooseOperation(operation){
         
+            if(currentOperand === '') return;
+            if(previousOperand !== ''){
+
+                this.compute()
+            }
             this.operation = operation
             this.previousOperand = this.currentOperand
             this.currentOperand = ''
-            this.previousOperand = this.previousOperand.toString() + ' ' + operation.toString()
         }
         
         compute(){
